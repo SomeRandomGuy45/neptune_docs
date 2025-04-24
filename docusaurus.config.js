@@ -113,7 +113,6 @@ const config = {
           },
         ],
         copyright: `Built with Docusaurus.`,
-        
       },
       prism: {
         theme: prismThemes.github,
