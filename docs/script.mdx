@@ -1,0 +1,62 @@
+---
+sidebar_position: 2
+---
+
+import DeprecatedBadge from '@site/src/components/DeprecatedBadge.js';
+
+# Scripting
+
+The choosing language for Neptune, is Lua.
+
+This isn't a tutorial of how to write in Lua, it's how it's like in Neptune structured.
+
+## Script Creation
+<DeprecatedBadge customMessage="Currently not added. Subject to change!">
+</DeprecatedBadge>
+
+When you create a script the basic setup for it will be like this
+
+```lua
+-- script_name
+
+--[[
+
+When the game start this function automaticly runs, here you will be able to run setup stuff,
+like EventListener, sprite creation, keybinds, and many more..
+
+--]]
+function init()
+    print("Hello world!")
+end
+
+--[[
+
+This is the code that gets called every frame to be runned
+This **should** help prevent the usage of using while true loops
+
+--]]
+
+function update()
+
+end
+
+-- Don't call the init or update function, it will be ignored!
+
+```
+
+## Base functions
+With the engine, we give you some cool functions, which we are going to explain now!
+
+### halt
+```cpp
+halt(numSec : number) -> void
+```
+
+Halts the script for the given number of seconds
+
+Example:
+```lua
+print("Hello world!")
+halt(3)
+print("Hello again!")
+``` 
