@@ -25,7 +25,9 @@ When the game start this function automaticly runs, here you will be able to run
 like EventListener, sprite creation, keybinds, and many more..
 
 --]]
-function init()
+local M = {}
+
+function M.init()
     print("Hello world!")
 end
 
@@ -36,8 +38,8 @@ This **should** help prevent the usage of using while true loops
 
 --]]
 
-function update()
-
+function M.update()
+    print("update called!")
 end
 
 -- Don't call the init or update function, it will be ignored!
