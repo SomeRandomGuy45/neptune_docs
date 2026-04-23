@@ -6,13 +6,9 @@ import DeprecatedBadge from '@site/src/components/DeprecatedBadge.js';
 
 # Scripting
 
-The choosing language for Neptune, is Lua.
-
-This isn't a tutorial of how to write in Lua, it's how it's like in Neptune structured.
+The choosen language for Neptune is Lua. This isn't a tutorial of how to write in Lua, but how it's structured.
 
 ## Script Creation
-<DeprecatedBadge customMessage="Currently not added. Subject to change!">
-</DeprecatedBadge>
 
 When you create a script the basic setup for it will be like this
 
@@ -52,11 +48,15 @@ return M
 With the engine, we give you some cool functions, which we are going to explain now!
 
 ### halt
+<DeprecatedBadge customMessage="Not recommened to use!">
+</DeprecatedBadge>
 ```cpp
 halt(numSec : number) -> void
 ```
 
-Halts the script for the given number of seconds
+Halts the script for the given number of seconds.
+
+**This isn't recommened to be used, as it causes the thread the script is on to temporary to be paused!**
 
 Example:
 ```lua

@@ -1,28 +1,44 @@
+---
+sidebar_position: 1
+---
+
 import DeprecatedBadge from '@site/src/components/DeprecatedBadge.js';
 
 # Object
 
 ## Intro
-Object is the base for all **drawable** objects. It is used a base for anything that you want to draw
+Object is the base for all **drawable** objects. It is used as a base for anything that you want to draw
 
 ## Attributes
 | Name     | Description |
 | -------- | ----------- |
-| x : float | Where the object is on the x line |
-| y : float | Where the object is on the y line |
+| name : string | The name of the object |
+| zIndex : int | The layer the object is on |
 
 ## API Calls
 
 ### setName
 
 ```cpp
-setName(newName : string) -> void
+setName(name : string) -> void
 ```
 
-Sets the name of the Object
+Sets the name of the object.
 
 Example: 
 ```lua
-local object = game.Workspace:getDrawObject("myObject")
-object:setName("myDifferentObject")
+object:setName("newName")
+```
+
+### setZIndex
+
+```cpp
+setZIndex(zIndex : int) -> void
+```
+
+Sets the zIndex of the object, helps making layers with multiple objects in the same X and Y cords.
+
+Example:
+```lua
+object:setZIndex(2)
 ```
